@@ -1,0 +1,28 @@
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+cisco3(config)#int lo10
+cisco3(config-if)#ip add 10.10.10.100 255.255.255.0
+cisco3(config-if)#exit
+cisco3(config)#int lo11
+cisco3(config-if)#ip add 10.10.10.111 255.255.255.0
+% 10.10.10.0 overlaps with Loopback10
+cisco3(config-if)#end
+cisco3#config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+cisco3(config)#int lo10
+cisco3(config-if)#ip add 10.10.10.100 255.255.255.0
+cisco3(config-if)#exit
+cisco3(config)#int lo11
+cisco3(config-if)#ip add 10.10.10.111 255.255.255.0
+% 10.10.10.0 overlaps with Loopback10
+cisco3(config-if)#end
+cisco3#config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+cisco3(config)#int lo10
+cisco3(config-if)#ip add 10.10.10.100 255.255.255.0
+cisco3(config-if)#exit
+cisco3(config)#int lo11
+cisco3(config-if)#ip add 10.10.10.111 255.255.255.0
+% 10.10.10.0 overlaps with Loopback10
+cisco3(config-if)#end
+cisco3#

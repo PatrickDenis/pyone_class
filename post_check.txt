@@ -1,0 +1,5 @@
+do show run
+do show ip int br
+do show ip arp
+do show log
+
