@@ -1,0 +1,10 @@
+feature bgp
+router bgp 10
+    address-family ipv4 unicast
+        network {{ netw1 }}/24
+        network {{ netw2 }}/24
+        network {{ netw3 }}/24
+    neighbor {{ peer1_ip }} remote-as {{ peer1_as }}
+        update-source lo0
+        ebgp-multihop 2
+        address-family ipv4 unicast

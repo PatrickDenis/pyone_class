@@ -1,0 +1,14 @@
+feature bgp
+router {{ local_as }}
+    address-family ipv4 unicast 
+        {%- for route in network_routes %}
+        network {{ route }}
+        {%- endfor %}
+    neighbor {{ peer1_ip }} remote-as {{ peer1_as }}
+        update-source lo0
+        ebgp-multihop 2
+        {%- if ipv6_enable %}
+        address-family ipv6 unicast
+        neighbor {{ peer1_ipv6 }}
+        {% endif %}
+

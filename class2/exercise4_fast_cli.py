@@ -5,7 +5,7 @@ from pprint import pprint
 from datetime import datetime
 
 #password = getpass()
-devices = {'host': 'cisco3.lasthop.io', 'username': 'pyclass', 'password': '88newclass', 'device_type': 'cisco_xe', 'session_log': 'logging.txt'}
+devices = {'host': 'cisco3.lasthop.io', 'username': 'pyclass', 'password': '88newclass', 'device_type': 'cisco_xe', 'session_log': 'logging.txt', 'fast_cli:True'}
 
 ssh_conn = Netmiko(**devices)
 print(ssh_conn.find_prompt())

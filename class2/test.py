@@ -27,3 +27,5 @@ def display_output(output):
 for device in (nxos1, nxos2):
     net_connect = ConnectHandler(**device)
     print(ssh_conn.find_prompt())
+
+    
